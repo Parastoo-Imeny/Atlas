@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'Inter': ['Inter', 'serif'] // Ensure fonts with spaces have " " surrounding it.
+    },
   },
   plugins: [],
 }
