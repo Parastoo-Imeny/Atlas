@@ -20,7 +20,7 @@ function CountryDetailPage() {
     <div className="bg-[#A7B3C7] pt-20 pr-5 pb-20 pl-5 grid gap-[20px]">
       <header className="grid gap-[20px]">
         <h1 className="font-semibold text-[30px] leading-9">
-          Atlas: Every Thing you need to know about {country?.name?.common}
+          Atlas: Everything you need to know about {country?.name?.common}
         </h1>
 
         <div className="bg-[#fffff]/70 rounded-[8px] font-medium text-[14px] shadow-lg bg-[#fff]/50  w-fit">
