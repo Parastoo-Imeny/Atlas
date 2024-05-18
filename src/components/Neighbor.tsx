@@ -13,8 +13,8 @@ if (isLoading) return <p>is Loading...</p>;
 if (error) return <p>is Loading...</p>;
 
     return(
-        <div>
-            {data && data.map((item,index) => <Card key={index} country={item} id={0} />) }
+        <div className="flex flex-col gap-[30px]">
+            {data && data.map((item,index) => <Card key={index} country={item} id={item?.ccn3} />) }
         </div>
     )}
 

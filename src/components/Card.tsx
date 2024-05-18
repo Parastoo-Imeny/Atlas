@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 interface Props {
   country: Country;
-  id: number;
+  id: string;
 }
 
 function Card({ country, id }: Props) {
- console.log("country", country)
+//  console.log("country", country)
   return (
     <div className="bg-[#FFF]/60 flex flex-col justify-between rounded-[10px] p-[20px]">
       <div className="rounded-[10px] overflow-hidden ">

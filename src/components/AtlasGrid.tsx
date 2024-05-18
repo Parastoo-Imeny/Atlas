@@ -9,8 +9,8 @@ interface Props {
 function AtlasGrid({ endPoint }: Props) {
   const { data, error, isLoading } = useData<Country[]>(endPoint);
 
-  console.log("endPoint", endPoint)
-  console.log("data", data)
+  // console.log("endPoint", endPoint)
+  // console.log("data", data)
 
   if (isLoading) return "Is Loading.....";
   if (error) return <p className="text-red-500">{error}</p>;
@@ -18,7 +18,7 @@ function AtlasGrid({ endPoint }: Props) {
   return (
     <section className="grid gap-[30px] md:grid-cols-3 lg:grid-cols-4">
       {data?.map((country, index) => {
-        return <Card key={index} country={country} id={index} />;
+        return <Card key={index} country={country} id={country?.ccn3} />;
       })}
     </section>
   );

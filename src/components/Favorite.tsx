@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 interface Props {
-  id: number;
+  id: string;
 }
 
 function Favorite({ id }: Props) {
@@ -9,7 +9,7 @@ function Favorite({ id }: Props) {
     !!localStorage.getItem(`${id}`)
   );
 
-  const handleClick = (id: number) => {
+  const handleClick = (id: string) => {
     if (isLiked) {
       setIsLiked(false);
       localStorage.removeItem(`${id}`);
