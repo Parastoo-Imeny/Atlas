@@ -2,9 +2,9 @@ import { Link, useParams } from "react-router-dom";
 import DescriptionCard from "../components/DescriptionCard";
 import useData from "../components/hooks/useData";
 import Country from "../interfaces/Country";
-import MapOfCountry from "../components/MapOfCountry";
 import Neighbors from "../components/Neighbors";
 import CountryDetailDescription from "../components/CountryDetailDescription";
+import MapOfCountry from "../components/MapOfCountry";
 
 function CountryDetailPage() {
   const { name } = useParams();
