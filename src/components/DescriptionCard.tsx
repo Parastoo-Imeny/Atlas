@@ -9,20 +9,21 @@ interface Props {
 }
 
 function DescriptionCard({ flags, country }: Props) {
-  console.log("country?.gini", country?.gini )
+  // console.log("country?.gini", country?.gini )
   const giniIndex = country?.gini && Object.values(country?.gini)[0];
-  const equality = giniIndex && giniIndex < 30 ? (
-    <svg className="w-5 h-5">
-      <use href="src/icons/sprite.svg#name=ss-caret-down"></use>
-    </svg>
-  ) : (
-    <svg className="w-5 h-5">
-      <use href="src/icons/sprite.svg#name=ss-caret-up"></use>
-    </svg>
-  );
+  const equality =
+    giniIndex && giniIndex < 30 ? (
+      <svg className="w-5 h-5 pr-[5px]">
+        <use href="src/icons/sprite.svg#name=ss-caret-down"></use>
+      </svg>
+    ) : (
+      <svg className="w-5 h-5 pr-[5px] fill-[#B52A22] !important">
+        <use href="src/icons/sprite.svg#name=ss-caret-up"></use>
+      </svg>
+    );
 
   return (
-    <div className="bg-[#FFFFFF99]/60 grid gap-[8px] rounded-[10px] p-[20px]">
+    <div className="bg-[#FFFFFF99]/60 grid gap-[8px] rounded-[10px] p-[20px] shadow-lg">
       <div className="rounded-lg flex justify-center overflow-hidden border-separate w-fit">
         <img
           className="overflow-hidden md:w-auto w-[100vw]"
@@ -83,7 +84,7 @@ function DescriptionCard({ flags, country }: Props) {
               ({country?.gini && Object.keys(country?.gini)})
             </span>
           </p>
-          <p className="text-[#00000] opacity-90 flex">
+          <p className="text-[#00000] opacity-90 flex items-center">
             {equality}
             {country?.gini && Object.values(country?.gini)}
           </p>
