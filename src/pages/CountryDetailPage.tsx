@@ -4,6 +4,7 @@ import useData from "../components/hooks/useData";
 import Country from "../interfaces/Country";
 import MapOfCountry from "../components/MapOfCountry";
 import Neighbors from "../components/Neighbors";
+import CountryDetailDescription from "../components/CountryDetailDescription";
 
 function CountryDetailPage() {
   const { name } = useParams();
@@ -17,33 +18,42 @@ function CountryDetailPage() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="bg-[#A7B3C7] pt-20 pr-5 pb-20 pl-5 grid gap-[20px]">
-      <header className="grid gap-[20px]">
-        <h1 className="font-semibold text-[30px] leading-9">
-          Atlas: Everything you need to know about {country?.name?.common}
-        </h1>
-
-        <div className="bg-[#fffff]/70 rounded-[8px] font-medium text-[14px] shadow-lg bg-[#fff]/50  w-fit">
-          {/* <button onClick={() => navigate('/')}>Go Back</button> */}
-          <Link className="flex items-center pt-[8px] pr-[16px] pb-[8px] pl-[16px]" to={"/"}>
-          <svg className="w-5 h-5 mr-[8px]">
-              <use href="src/icons/sprite.svg#name=rs-angle-small-right"></use>
-            </svg>
-            <p>Go Back</p>
-          </Link>
+    <div className="bg-[#A7B3C7] pt-20 pr-5 pb-20 pl-5">
+      <div className="flex flex-col gap-[20px] lg:max-w-[1320px] m-auto">
+        <header className="flex flex-col gap-[20px]">
+          <h1 className="font-semibold text-[30px] leading-9">
+            Atlas: Everything you need to know about {country?.name?.common}
+          </h1>
+          <div className="bg-[#fffff]/70 rounded-[8px] font-medium text-[14px] shadow-lg bg-[#fff]/50  w-fit">
+            {/* <button onClick={() => navigate('/')}>Go Back</button> */}
+            <Link
+              className="flex items-center pt-[8px] pr-[16px] pb-[8px] pl-[16px]"
+              to={"/"}
+            >
+              <svg className="w-5 h-5 mr-[8px]">
+                <use href="src/icons/sprite.svg#name=rs-angle-small-right"></use>
+              </svg>
+              <p>Go Back</p>
+            </Link>
+          </div>
+        </header>
+        <div className="md:flex md:flex-row md:justify-between lg:max-h-[1755px]">
+          <div className="lg:max-w-[983px] lg:grow">
+            <div className="hidden">
+              {country && <CountryDetailDescription country={country} />}
+            </div>
+          </div>
+          <div className="md:max-w-[250px] lg:max-w-[307px]">
+            {country && (
+              <DescriptionCard flags={country?.flags} country={country} />
+            )}
+          </div>
+          <div className="font-medium text-[26px] leading-7 pt-[60px] pb-[10px]">
+              Map of {country?.name.common}
+            </div>
+          {country && <MapOfCountry country={country} />}
         </div>
-
-      </header>
-      <div>
-        {country && <DescriptionCard flags={country?.flags} country={country} />}
-      </div>
-
-      <div>
-        {country && <MapOfCountry country={country} />}
-      </div>
-
-      <div>
-        {country && <Neighbors country={country} />}
+        <div>{country && <Neighbors country={country} />}</div>
       </div>
     </div>
   );
