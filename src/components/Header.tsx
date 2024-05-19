@@ -1,21 +1,24 @@
 import { useState } from "react";
 import DropdownPanel from "./DropdownPanel";
 import FilterBadge from "./FilterBadge";
+import Option from "../interfaces/Option";
 
 interface Props {
-  handleChange: (option: string) => void;
+  handleChange: (endpoint: string) => void;
 }
 
 function Header({ handleChange }: Props) {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeOption, setActiveOption] = useState("All Regions");
 
   const handleBadgeClick = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleOptionClick = (option: string) => {
+  const handleOptionClick = (option: Option) => {
     setIsOpen(false);
-    handleChange(option);
+    setActiveOption(option.title);
+    handleChange(option.endpoint);
   };
 
   // const onChange = (option: string) => console.log(option);
@@ -35,12 +38,15 @@ function Header({ handleChange }: Props) {
         </div>
         <div className="lg:flex lg:flex-col lg:w-[177px] lg:visible hidden">
           <FilterBadge handleBadgeClick={handleBadgeClick} />
-          <div className="absolute top-[170px]">
-            {isOpen && <DropdownPanel handleOptionClick={handleOptionClick} />}
+          <div className="absolute top-[170px] w-[177px]">
+            {isOpen && (
+              <DropdownPanel
+                handleOptionClick={handleOptionClick}
+                activeOption={activeOption}
+              />
+            )}
           </div>
         </div>
-
-        
       </header>
     </div>
   );
