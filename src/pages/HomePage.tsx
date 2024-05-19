@@ -10,7 +10,7 @@ function HomePage() {
   return (
     <>
       <div className="bg-[#A7B3C7] pt-20 pr-5 pb-20 pl-5 grid gap-[30px]">
-        <div className="md:max-w-[720px] lg:max-w-[1140px] xl:max-w-[1320px] md:m-auto">
+        <div className="max-w-[425px] md:max-w-[720px] lg:max-w-[1140px] xl:max-w-[1320px] 2xl:max-w-[1440px] m-auto">
             <Header handleChange={handleChange} />
             <AtlasGrid endPoint={endPoint} />
             {/* <HorizontalScroll /> */}

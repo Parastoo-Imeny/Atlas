@@ -16,7 +16,7 @@ function AtlasGrid({ endPoint }: Props) {
   if (error) return <p className="text-red-500">{error}</p>;
 
   return (
-    <section className="grid gap-[30px] md:grid-cols-3 lg:grid-cols-4">
+    <section className="grid gap-[30px] md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
       {data?.map((country, index) => {
         return <Card key={index} country={country} id={country?.ccn3} />;
       })}

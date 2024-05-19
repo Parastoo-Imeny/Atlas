@@ -19,7 +19,7 @@ function CountryDetailPage() {
 
   return (
     <div className="bg-[#A7B3C7] pt-20 pr-5 pb-20 pl-5">
-      <div className="flex flex-col gap-[20px] lg:max-w-[1320px] m-auto">
+      <div className="flex flex-col gap-[20px] max-w-[425px] md:max-w-[820px] lg:max-w-[1050px] xl:max-w-[1320px] m-auto">
         <header className="flex flex-col gap-[20px]">
           <h1 className="font-semibold text-[30px] leading-9">
             Atlas: Everything you need to know about {country?.name?.common}
@@ -37,23 +37,26 @@ function CountryDetailPage() {
             </Link>
           </div>
         </header>
-        <div className="md:flex md:flex-row md:justify-between lg:max-h-[1755px]">
-          <div className="lg:max-w-[983px] lg:grow">
-            <div className="hidden">
-              {country && <CountryDetailDescription country={country} />}
-            </div>
-          </div>
-          <div className="md:max-w-[250px] lg:max-w-[307px]">
+
+        <div className="md:flex md:flex-row-reverse md:justify-between md:gap-[20px] lg:max-h-[1755px]">
+          <div className="md:max-w-[250px] lg:max-w-[298px] xl:max-w-[307px]">
             {country && (
               <DescriptionCard flags={country?.flags} country={country} />
             )}
           </div>
-          <div className="font-medium text-[26px] leading-7 pt-[60px] pb-[10px]">
-              Map of {country?.name.common}
+          <div className="lg:max-w-[983px] md:grow">
+            <div className="hidden md:visible md:flex">
+              {country && <CountryDetailDescription country={country} />}
             </div>
-          {country && <MapOfCountry country={country} />}
+
+            <div className="">
+              {country && <MapOfCountry country={country} />}
+            </div>
+          </div>
         </div>
-        <div>{country && <Neighbors country={country} />}</div>
+        <div className="md:hidden">
+          {country && <Neighbors country={country} />}
+        </div>
       </div>
     </div>
   );
