@@ -38,7 +38,7 @@ function CountryDetailPage() {
               to={"/"}
             >
               <svg className="w-5 h-5 mr-[8px]">
-                <use href="../../public/icons/sprite-vercel.svg#fi-rs-angle-small-right"></use>
+                <use href="../../publicDir/icons/sprite-vercel.svg#fi-rs-angle-small-right"></use>
               </svg>
               <p>Go Back</p>
             </Link>
@@ -61,7 +61,7 @@ function CountryDetailPage() {
             </div>
           </div>
         </div>
-        <div className="md:hidden">
+        <div className="">
           {country && <Neighbors country={country} />}
         </div>
       </div>
