@@ -14,11 +14,11 @@ function DescriptionCard({ flags, country }: Props) {
   const equality =
     giniIndex && giniIndex < 30 ? (
       <svg className="w-5 h-5 pr-[5px]">
-        <use href="../../public/icons/sprite-vercel.svg#name=ss-caret-down"></use>
+        <use href="../../publicDir/icons/sprite-vercel.svg#name=ss-caret-down"></use>
       </svg>
     ) : (
       <svg className="w-5 h-5 pr-[5px] fill-[#B52A22] !important">
-        <use href="../../public/icons/sprite-vercel.svg#name=ss-caret-up"></use>
+        <use href="../../publicDir/icons/sprite-vercel.svg#name=ss-caret-up"></use>
       </svg>
     );
 

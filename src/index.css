@@ -15,6 +15,6 @@
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
-    src: url(../public/fonts/Inter-Regular.ttf) format("ttf");
+    src: url(../publicDir/fonts/Inter-Regular.ttf) format("ttf");
   }
 }

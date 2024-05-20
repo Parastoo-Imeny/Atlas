@@ -15,7 +15,7 @@ function FilterBadge({ handleBadgeClick }: Props) {
         <div className="text-[#000] flex items-center">
           Region
           <svg className="w-5 h-5 ml-[8px]">
-            <use href="../../public/icons/sprite-vercel.svg#fi-ss-angle-small-down"></use>
+            <use href="../../publicDir/icons/sprite-vercel.svg#fi-ss-angle-small-down"></use>
           </svg>
         </div>
       </button>
