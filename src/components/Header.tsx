@@ -26,10 +26,10 @@ function Header({ handleChange }: Props) {
     <div>
       <header className="pt-5 pb-5 lg:flex lg:justify-between lg:items-center">
         <div className="lg:w-[811px]">
-          <h1 className="font-semibold text-[30px] leading-9">
+          <h1 className="font-semibold text-[30px] text-[#000] leading-9">
             Atlas: The Ultimate Guide to the World
           </h1>
-          <p className="font-normal text-[16px] leading-6 text-[#00000]/[70%]">
+          <p className="font-normal text-[16px] leading-6 text-[#000]/70">
             Atlas is a website that lists every country with their flags and
             facts. You can explore the world map, search by name or region, and
             filter by criteria. Learn about the world and its diversity with

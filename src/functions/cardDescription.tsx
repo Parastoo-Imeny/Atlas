@@ -3,7 +3,9 @@ import population from "./population";
 
 const cardDescription = (country: Country) => {
   return (
-    <p className="font-normal opacity-70">{`${country?.name?.official} is ${
+    <p className="font-normal text-[14px] text-[#000]/70">{`${
+      country?.name?.official
+    } is ${
       country?.independent ? "an indepebdent" : "a dependent"
     } country in ${
       country?.subregion

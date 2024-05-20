@@ -12,10 +12,10 @@ function FilterBadge({ handleBadgeClick }: Props) {
         onClick={() => handleBadgeClick()}
         className="rounded-[30px] overflow-hidden shadow-lg pt-[8px] pr-[16px] pb-[8px] pl-[16px] "
       >
-        <div className="flex items-center">
+        <div className="text-[#000] flex items-center">
           Region
           <svg className="w-5 h-5 ml-[8px]">
-            <use href="src/icons/sprite.svg#fi-ss-angle-small-down"></use>
+            <use href="src/icons/sprite-vercel.svg#fi-ss-angle-small-down"></use>
           </svg>
         </div>
       </button>

@@ -7,7 +7,7 @@ interface Props {
 function MapOfCountry({ country }: Props) {
   return (
     <div className="rounded-[10px] flex flex-col">
-      <div className="font-medium text-[26px] leading-7 pt-[60px] pb-[10px]">
+      <div className="font-medium text-[26px] text-[#000] leading-7 pt-[60px] pb-[10px]">
         Map of {country?.name.common}
       </div>
       <iframe

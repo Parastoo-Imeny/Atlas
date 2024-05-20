@@ -22,7 +22,7 @@ function DropdownPanel({ handleOptionClick, activeOption }: Props) {
       onClick={() => {
         handleOptionClick(option);
       }}
-      className={`pt-[8px] pr-[16px] pb-[8px] pl-[16px] hover:border-l-[1px] hover:border-[#2670E9] cursor-pointer ${
+      className={`text-[#000] pt-[8px] pr-[16px] pb-[8px] pl-[16px] hover:border-l-[1px] hover:border-[#2670E9] cursor-pointer ${
         activeOption === option.title &&
         "bg-gradient-to-r from-[#2670E9]/30 to-[#2670E9]/0 origin-right border-l-[1px] border-[#2670E9] shadow-[#2670E9]/45"
       }`}
