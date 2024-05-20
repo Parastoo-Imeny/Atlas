@@ -31,7 +31,7 @@ function Card({ country, id }: Props) {
       </div>
       <div className="overflow-hidden font-medium text-[14px] rounded-[8px] shadow-lg bg-gradient-to-r from-[#fff]/50 to-[#fff]/0  w-fit h-fit">
         <Link
-          className="flex items-center no-underline pt-[8px] pr-[16px] pb-[8px] pl-[16px]"
+          className="flex items-center hover:no-underline pt-[8px] pr-[16px] pb-[8px] pl-[16px]"
           to={`/${country?.name?.common}`}
         >
           <p className="text-[#000]">Learn more</p>

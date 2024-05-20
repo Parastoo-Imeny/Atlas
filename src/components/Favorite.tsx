@@ -34,7 +34,7 @@ function Favorite({ id }: Props) {
   return (
     <div
       onClick={() => handleClick(id)}
-      className="bg-stone-100 w-[36px] h-[36px] rounded-full shadow-[#00000]/[10%] flex justify-center items-center"
+      className="bg-stone-100 w-[36px] h-[36px] rounded-full shadow-[#00000]/[10%] flex justify-center items-center cursor-pointer"
     >
       {isLiked ? likeIcon : unLikeIcon}
     </div>
