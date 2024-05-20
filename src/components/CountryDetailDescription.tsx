@@ -18,17 +18,22 @@ const CountryDetailDescription = ({ country }: Props) => {
           country?.name.common
         } boasts a rich cultural heritage and a population of approximately ${population(
           country?.population
-        )} people. The official languages include ${showingListOfSth(
-          Object.values(country?.languages)
-        )}, reflecting the linguistic diversity of the nation.`}
+        )} people. The official languages include ${
+          country?.languages &&
+          showingListOfSth(Object.values(country?.languages))
+        }, reflecting the linguistic diversity of the nation.`}
       </p>
       <p>{country?.flags?.alt}</p>
       <p>
-        {`The ${Object.values(country?.currencies).map(
-          (item) => `${item.name} ${item.symbol}`
-        )} serves as the official currency, with its symbol represented by ${Object.values(
-          country?.currencies
-        ).map((item) => `${item.symbol}`)}. Geographically, ${
+        {`The ${
+          country?.currencies &&
+          Object.values(country?.currencies).map(
+            (item) => `${item.name} ${item.symbol}`
+          )
+        } serves as the official currency, with its symbol represented by ${
+          country?.currencies &&
+          Object.values(country?.currencies).map((item) => `${item.symbol}`)
+        }. Geographically, ${
           country?.name.common
         } spans an expansive area of ${country?.area?.toLocaleString(
           "en-US"
@@ -49,10 +54,10 @@ const CountryDetailDescription = ({ country }: Props) => {
           country?.name.common
         }'s postal codes adhere to a specific format, requiring six digits and matching the regular expression "^(\d{6})$." The country's international dialing code is ${
           country?.idd?.root
-        }, signifying its global connectivity. With a Gini coefficient of ${Object.values(
-          country?.gini
-        )} in ${Object.keys(country?.gini)}, ${
-          country?.name.common
+        }, signifying its global connectivity. With a Gini coefficient of ${
+          country?.gini && Object.values(country?.gini)
+        } in ${country?.gini && Object.keys(country?.gini)}, ${
+          country?.name?.common
         } addresses socio-economic inequality as it continues to evolve as a major player on the world stage.`}
       </p>
     </div>
