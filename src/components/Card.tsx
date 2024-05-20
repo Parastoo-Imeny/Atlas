@@ -36,7 +36,7 @@ function Card({ country, id }: Props) {
         >
           <p className="text-[#000]">Learn more</p>
           <svg className="w-5 h-5 ml-[8px]">
-            <use href="src/icons/sprite-vercel.svg#name=rs-angle-small-right"></use>
+            <use href="../../public/icons/sprite-vercel.svg#name=rs-angle-small-right"></use>
           </svg>
         </Link>
       </div>
