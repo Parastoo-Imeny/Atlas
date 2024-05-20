@@ -5,6 +5,7 @@ import Country from "../interfaces/Country";
 import Neighbors from "../components/Neighbors";
 import CountryDetailDescription from "../components/CountryDetailDescription";
 import MapOfCountry from "../components/MapOfCountry";
+import Spinner from "../components/Spinner";
 
 function CountryDetailPage() {
   const { name } = useParams();
@@ -14,8 +15,14 @@ function CountryDetailPage() {
   );
   const country = data && data[0];
 
-  if (isLoading) return "Is Loading...";
-  if (error) return <p>{error}</p>;
+  if (isLoading) return (
+    <div className="flex justify-center items-center h-screen bg-[#A7B3C7]">
+        <Spinner />
+      </div>
+  );
+  if (error) return <div className="flex justify-center items-center h-screen bg-[#A7B3C7]">
+    <p className="text-[#B52A22] text-[20px]">{error}</p>
+  </div>;
 
   return (
     <div className="bg-[#A7B3C7] pt-20 pr-5 pb-20 pl-5">
