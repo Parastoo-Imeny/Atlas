@@ -21,13 +21,13 @@ function Favorite({ id }: Props) {
 
   const unLikeIcon = (
     <svg className="w-5 h-5">
-      <use href="src/icons/sprite.svg#name=rs-heart"></use>
+      <use href="src/icons/sprite-vercel.svg#name=rs-heart"></use>
     </svg>
   );
 
   const likeIcon = (
     <svg className="w-5 h-5">
-      <use href="src/icons/sprite.svg#Vector-black"></use>
+      <use href="src/icons/sprite-vercel.svg#Vector"></use>
     </svg>
   );
 

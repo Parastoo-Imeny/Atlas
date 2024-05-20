@@ -54,21 +54,21 @@
 
 
 <!-- <svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#fi-rs-angle-small-right"></use>
+  <use href="src/icons/sprite-vercel.svg#fi-rs-angle-small-right"></use>
 </svg><svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#fi-ss-angle-small-down"></use>
+  <use href="src/icons/sprite-vercel.svg#fi-ss-angle-small-down"></use>
 </svg><svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#Icon"></use>
+  <use href="src/icons/sprite-vercel.svg#Icon"></use>
 </svg><svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#name=rs-angle-small-right"></use>
+  <use href="src/icons/sprite-vercel.svg#name=rs-angle-small-right"></use>
 </svg><svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#name=rs-heart"></use>
+  <use href="src/icons/sprite-vercel.svg#name=rs-heart"></use>
 </svg><svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#name=ss-caret-down"></use>
+  <use href="src/icons/sprite-vercel.svg#name=ss-caret-down"></use>
 </svg><svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#name=ss-caret-up"></use>
+  <use href="src/icons/sprite-vercel.svg#name=ss-caret-up"></use>
 </svg><svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#Vector"></use>
+  <use href="src/icons/sprite-vercel.svg#Vector"></use>
 </svg><svg className="w-20 h-20">
-  <use href="src/icons/sprite.svg#Vector-black"></use>
+  <use href="src/icons/sprite-vercel.svg#Vector-black"></use>
 </svg> -->
