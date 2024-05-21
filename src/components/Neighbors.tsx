@@ -9,7 +9,7 @@ function Neighbors({ country }: Props) {
 
   return (
     <>
-      <div className="font-medium text-[26px] leading-7 pt-[60px] pb-[10px]">Neighbors of {country?.name.common}</div>
+      <div className="font-medium text-[26px] text-[#000] leading-7 pt-[60px] pb-[10px]">Neighbors of {country?.name.common}</div>
       <div>
         {country && <Neighbor codes={country?.borders?.toString()} />}
         {/* {country &&

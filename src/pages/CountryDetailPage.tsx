@@ -61,7 +61,7 @@ function CountryDetailPage() {
             </div>
           </div>
         </div>
-        <div className="md:hidden">
+        <div className="">
           {country && <Neighbors country={country} />}
         </div>
       </div>
